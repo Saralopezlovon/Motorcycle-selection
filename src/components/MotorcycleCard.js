@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const MotorcycleCard=(props)=> {
     return (
         <li> 
-          <Link to={`/motorcycles/${props.motorcycles.id}`}>     
+          <Link to={`/motorcycle/${props.motorcycle.id}`}>     
             <img src={props.motorcycle.imagen} alt={props.motorcycle.nombre}></img>
             <ul>           
               <li>{props.motorcycle.marca}</li>

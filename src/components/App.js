@@ -22,8 +22,9 @@ class App extends React.Component {
   }
 
   renderMotorcycleDetail(props){
-    console.log(this.state, props.match.params.id)
-    return <MotorcycleDetail/>
+    const routeId = props.match.params.id;
+    const motorcycle = this.state.motorcycles.find (item => item.id === routeId);
+    return <MotorcycleDetail motorcycle={motorcycle}/>
   }
 
   render() {

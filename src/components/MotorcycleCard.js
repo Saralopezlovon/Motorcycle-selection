@@ -1,11 +1,13 @@
 import React from 'react';
 import "../stylesheets/motorcyclecard.scss";
 
-function MotorcycleCard() {
+const MotorcycleCard=(props)=> {
     return (
-        <div>Card motos</div>
+        <div>{props.motorcycle.nombre}</div>
+        
 
+        
     );
-    }
+    };
 
 export default MotorcycleCard;

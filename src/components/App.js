@@ -13,10 +13,12 @@ class App extends React.Component {
     super();
     this.state ={
       search:'',
-      motorcycles:[]
+      motorcycles:[],
+      carnetSelected: "",
     };
     this.renderMotorcycleDetail = this.renderMotorcycleDetail.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleFilter = this.handleFilter.bind(this);
   }
 
   componentDidMount(){
@@ -29,10 +31,19 @@ class App extends React.Component {
     })
   }
 
+  handleFilter(carnetSelected) {
+    this.setState({ carnetSelected: carnetSelected.value });
+  }
+
+
   filterMotorcyclesBySearch(){
-    return this.state.motorcycles.filter(motorcycle => {
-      return motorcycle.nombre.toLowerCase().includes(this.state.search.toLowerCase())||
-             motorcycle.marca.toLowerCase().includes(this.state.search.toLowerCase());
+    return this.state.motorcycles
+
+    .filter(motorcycle => {
+      return motorcycle.nombre.toLowerCase().includes(this.state.search.toLowerCase())
+    })
+    .filter(motorcycle => {
+      return motorcycle.carnet.toLowerCase().includes(this.state.carnetSelected.toLowerCase());
     });
   }
 
@@ -52,7 +63,7 @@ class App extends React.Component {
     return (
     <div className="App">
       <Header/>
-      <Filters handleSearch={this.handleSearch}/>
+      <Filters handleSearch={this.handleSearch} handleFilter={this.handleFilter} carnetSelected={this.state.carnetSelected}/>
 
       <Switch>
         <Route exact path='/' >

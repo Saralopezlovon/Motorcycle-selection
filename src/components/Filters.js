@@ -20,24 +20,18 @@ function Filters(props) {
   
     return (
       <form className="input-container" onSubmit={onSubmit}>
-        <input className="input" type="text" placeholder="Buscar modelo de moto" onChange={handleSearch}/>
 
         <div>
-
-
 
           <label htmlFor="A">
             A
             <input name="carnet" value="A" id="A" type="radio" onChange={handleFilter} checked={props.carnetSelected === "A"} />
           </label>
 
-
-
           <label htmlFor="A/A2">
             A/A2
             <input name="carnet" value="A/A2" id="A/A2" type="radio" onChange={handleFilter} checked={props.carnetSelected === "A/A2"} />
           </label>
-
 
           <label htmlFor="A1/B">
             A1/B
@@ -59,6 +53,9 @@ function Filters(props) {
 
 
         </div>
+
+        <input className="input" type="text" placeholder="Buscar modelo de moto" onChange={handleSearch}/>
+
 
         </form>
     );

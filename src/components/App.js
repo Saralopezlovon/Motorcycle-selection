@@ -15,10 +15,14 @@ class App extends React.Component {
       search:'',
       motorcycles:[],
       carnetSelected: "",
+      tipo:"",
+      marca:"",
     };
     this.renderMotorcycleDetail = this.renderMotorcycleDetail.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleFilter = this.handleFilter.bind(this);
+    this.handleFilterTipo = this.handleFilterTipo.bind(this);
+    this.handleFilterMarca = this.handleFilterMarca.bind(this);
   }
 
   componentDidMount(){
@@ -32,7 +36,18 @@ class App extends React.Component {
   }
 
   handleFilter(carnetSelected) {
-    this.setState({ carnetSelected: carnetSelected.value });
+    this.setState({ carnetSelected: carnetSelected.value
+     });
+  }
+
+  handleFilterTipo(tipo){
+    this.setState({ tipo: tipo.value
+    });
+  }
+
+  handleFilterMarca(marca){
+    this.setState({ marca: marca.value
+    });
   }
 
 
@@ -43,8 +58,17 @@ class App extends React.Component {
       return motorcycle.nombre.toLowerCase().includes(this.state.search.toLowerCase())
     })
     .filter(motorcycle => {
-      return motorcycle.carnet.toLowerCase().includes(this.state.carnetSelected.toLowerCase());
+      return motorcycle.carnet.toLowerCase().includes(this.state.carnetSelected.toLowerCase())     
+    })
+
+    .filter(motorcycle => {
+      return motorcycle.tipo.toLowerCase().includes(this.state.tipo.toLowerCase())     
+    })
+
+    .filter(motorcycle => {
+      return motorcycle.marca.toLowerCase().includes(this.state.marca.toLowerCase())     
     });
+
   }
 
 
@@ -63,7 +87,11 @@ class App extends React.Component {
     return (
     <div className="App">
       <Header/>
-      <Filters handleSearch={this.handleSearch} handleFilter={this.handleFilter} carnetSelected={this.state.carnetSelected}/>
+      <Filters 
+      handleSearch={this.handleSearch} 
+      handleFilter={this.handleFilter} carnetSelected={this.state.carnetSelected} 
+      handleFilterTipo={this.handleFilterTipo} tipo={this.state.tipo} 
+      handleFilterMarca={this.handleFilterMarca} marca={this.state.marca}/>
 
       <Switch>
         <Route exact path='/' >

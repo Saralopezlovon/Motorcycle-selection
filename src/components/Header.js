@@ -3,7 +3,9 @@ import "../stylesheets/header.scss";
 
 function Header() {
     return (
-        <div>Encabezado para decorar</div>
+        <div className="header">
+            <span className="header_title"> - Wellcome to the jungle - </span>    
+        </div>
 
     );
     }

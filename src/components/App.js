@@ -87,18 +87,20 @@ class App extends React.Component {
     return (
     <div className="App">
       <Header/>
-      <Filters 
-      handleSearch={this.handleSearch} 
-      handleFilter={this.handleFilter} carnetSelected={this.state.carnetSelected} 
-      handleFilterTipo={this.handleFilterTipo} tipo={this.state.tipo} 
-      handleFilterMarca={this.handleFilterMarca} marca={this.state.marca}/>
+      <div className="body-page">
+        <Filters 
+        handleSearch={this.handleSearch} 
+        handleFilter={this.handleFilter} carnetSelected={this.state.carnetSelected} 
+        handleFilterTipo={this.handleFilterTipo} tipo={this.state.tipo} 
+        handleFilterMarca={this.handleFilterMarca} marca={this.state.marca}/>
 
-      <Switch>
-        <Route exact path='/' >
-          <MotorcycleList motorcycles={this.filterMotorcyclesBySearch()}/>
-        </Route>
-        <Route path='/motorcycle/:id' render={this.renderMotorcycleDetail}/>
-      </Switch>
+        <Switch>
+          <Route exact path='/' >
+            <MotorcycleList motorcycles={this.filterMotorcyclesBySearch()}/>
+          </Route>
+          <Route path='/motorcycle/:id' render={this.renderMotorcycleDetail}/>
+        </Switch>
+      </div>
 
     </div>
     );

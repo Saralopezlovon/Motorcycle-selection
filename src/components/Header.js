@@ -1,6 +1,5 @@
 import React from 'react';
 import "../stylesheets/header.scss";
-import brillo from "../images/brillo.png";
 
 function Header() {
     return (

@@ -4,7 +4,7 @@ import "../stylesheets/motorcyclelist.scss";
 
 const MotorcycleList=(props)=> {
     return (
-        <div>
+        <div className="list-container">
             {props.motorcycles.map(motorcycle =>{
                 return(
                     <MotorcycleCard 

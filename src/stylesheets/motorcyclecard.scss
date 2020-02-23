@@ -1,0 +1,37 @@
+.images-motorcycles{
+    height: 255px;
+    width: 418px;
+    border: 3px solid yellow;
+}
+
+.card-motorcycle{
+    border: 3px solid fuchsia;
+    list-style: none;
+    width: 419px;
+    height: auto;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+.description-container{
+    border:3px solid brown;
+    color:black;
+    font-family: IBM Plex Serif;
+    list-style: none;
+    text-decoration: none;
+    font-weight: medium;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    line-height: 25px;
+}
+
+.characteristic{
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+    font-size: 20px;
+}

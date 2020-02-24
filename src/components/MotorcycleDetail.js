@@ -12,14 +12,14 @@ const MotorcycleDetail =(props)=> {
         </div>
 
         <div className="card">
-            <img src={props.motorcycle.imagen} alt={props.motorcycle.nombre}></img>
+            <img className="imagen-detail" src={props.motorcycle.imagen} alt={props.motorcycle.nombre}></img>
 
             <ul className="card-description-container">
-                <li>Modelo{props.motorcycle.nombre}</li>
-                <li>Marca: {props.motorcycle.marca}</li>
-                <li>Año: {props.motorcycle.año}</li>
-                <li>Descripción: {props.motorcycle.descripcion}</li>
-                <li>Precio: {props.motorcycle.precio} € </li>
+                <li className="details-model">Modelo: {props.motorcycle.nombre}</li>
+                <li className="details-brand">Marca: {props.motorcycle.marca}</li>
+                <li className="details">Año: {props.motorcycle.año}</li>
+                <li className="details">Descripción: {props.motorcycle.descripcion}</li>
+                <li className="details">Precio: {props.motorcycle.precio} € </li>
             </ul>
         </div>
     </div>

@@ -1,0 +1,87 @@
+.detail-container{
+    border:3px solid greenyellow;
+    margin-top:30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-container{
+    border:3px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+    width: 700px;
+
+}
+
+.link{
+border: 1px solid lightslategrey;
+border-radius: 10%;
+padding-left: 5px;
+padding-right: 5px;
+color: black;
+text-decoration: none;
+font-family: "Changa", sans-serif;
+font-weight: bold;
+font-size: 17px;
+margin-bottom: 8px;
+
+}
+
+.card{
+    border:3px solid palevioletred;
+    background-color: black;
+    padding-left: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 700px;
+}
+
+.imagen-detail{
+    border:3px solid goldenrod;
+    width: 250px;
+    height: 250px;
+}
+
+.card-description-container{
+    border:3px solid red;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-right: 50px;
+    display: grid;
+    color: white;
+    list-style: none;
+    width: 200px;
+    line-height: 20px;
+    text-align: left;
+
+}
+
+.details-model{
+    border:3px solid orangered;
+    font-family: IBM Plex Serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 13px;
+
+}
+
+.details-brand{
+    border:3px solid lightcoral;
+    font-family: IBM Plex Serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 8px;
+
+}
+
+.details{
+    border:3px solid blueviolet;
+    font-family: IBM Plex Serif;
+    font-size: 18px;
+   
+}
